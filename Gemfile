@@ -28,6 +28,10 @@ gem 'jbuilder', '2.5.0'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# use Twitter bootstrap library for front-end UI and layout
+# bundle install, then added "sass" to apllication file, .css.scss
+gem 'bootstrap-sass', '3.3.7.0'
+
 group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '1.3.13'
