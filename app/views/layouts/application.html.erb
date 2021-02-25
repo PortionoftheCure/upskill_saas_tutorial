@@ -9,7 +9,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
+<!-- inserted bootsrap in body -->
   <body>
     <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class='container'>
@@ -30,8 +30,8 @@
       </div>
     </nav>
     
-    <div class="container"> <!-- adding bootstrap class to make sure it works by creating margins -->
-      <%= yield %>
-    </div>
+    
+    <%= yield %>
+
   </body>
 </html>
