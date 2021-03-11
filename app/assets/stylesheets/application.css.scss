@@ -30,24 +30,32 @@ h1, h2, h3 {
 .navbar {
   border: none;
 }
-
-.navbar-default .navbar-brand {
-  color: white;
-}
-
+  //Had to overwrite bootstrap syle with stronger level of specificity
+  //breaks rule DRY don't repeat yourself, make code dryer, refactor
+  //can nest selectors
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
-  color:  white;
+  color: white;
+  &:hover{
+    color: white;
+    opacity: 0.75;
+  }
 }
 
-.navbar-default .navbar-brand:hover {
-  color: white;
-  opacity: 0.75;
-}
+// .navbar-default .navbar-nav > li > a {  
+//   color:  white;          //refactored into above with comma
+// }
 
-.navbar-default .navbar-nav > li > a:hover {
-  color: white;
-  opacity: 0.75;
-}
+// .navbar-default .navbar-brand:hover,
+// .navbar-default .navbar-nav > li > a:hover {
+//   color: white;      //SASS way- used &hover:{} to nest in top level class
+//   opacity: 0.75;
+// }
+
+// .navbar-default .navbar-nav > li > a:hover {
+//   color: white;      //refactored into one group of selectors
+//   opacity: 0.75;
+// }
 
 .home-callout {
   color: white;
