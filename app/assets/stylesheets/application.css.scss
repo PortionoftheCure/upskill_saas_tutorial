@@ -32,7 +32,7 @@ h1, h2, h3 {
 }
   //Had to overwrite bootstrap syle with stronger level of specificity
   //breaks rule DRY don't repeat yourself, make code dryer, refactor
-  //can nest selectors
+  //can nest selectors, but only with Sass, not regular CSS
 .navbar-default .navbar-brand,
 .navbar-default .navbar-nav > li > a {
   color: white;
